@@ -3,7 +3,6 @@
  * number, boolean, string, undefined, null.
  * Другие типы вызовут ошибку. */
 export function toString(value) {
-    
 }
 
 /** переводит целое число в строку и возрвращает это значение*/
