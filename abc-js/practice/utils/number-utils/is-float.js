@@ -1,7 +1,5 @@
-import { geterror } from "../string-utils/common.js";
+import { isInteger } from "./is-integer.js";
 
 export function isFloat(value) {
-geterror(value)
-if (value % 1 !== 0) return true;
-return false;
+  return !isInteger(value);
 }

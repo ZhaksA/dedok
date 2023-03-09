@@ -1,10 +1,9 @@
-import { lenErrors } from "./common.js";
-
 export function len(text) {
-lenErrors(text);
-let count = 0;
+  const errStr = "argument must be type of string";
+  if (typeof text !== "string") throw Error(errStr);
+  let count = 0;
   for (let i = 0; text[i] !== undefined; i += 1) {
-  count += 1;
-}
-return count;
+    count += 1;
+  }
+  return count;
 }

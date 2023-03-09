@@ -1,6 +1,4 @@
-import { geterror } from "../string-utils/common.js";
 export function isInteger(value) {
-geterror(value)
-if (value % 1 !== 0) return false;
-return true;
+  if (typeof value !== "number") throw Error("value must be only number type");
+  return value % 1 === 0;
 }

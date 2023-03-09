@@ -1,11 +1,7 @@
-import { errorIsInRange } from "../string-utils/common.js";
-
 /** проверяет входит ли число num в диапозон от begin до end.
   Значения begin и end вхоодят в проверяемый диапазон.*/
 export function isInRange(num, begin, end) {
-  errorIsInRange(num);
-  errorIsInRange(begin);
-  errorIsInRange(end);
-  if (begin <= num && num <= end) return true;
-  return false;
+  if (typeof value !== "number")
+    throw Error("all parameter is required and must be number type");
+  return begin <= num && num <= end;
 }
