@@ -34,7 +34,6 @@ export function checkParameters(text, count) {
   if (count < 0 || count % 1 !== 0) throw Error("invalid count");
 }
 export function checkSubstringParameters(text, start, end) {
-  if (typeof text !== "string") throw Error("argument must be type of string");
   if (typeof start !== "number" || start % 1 !== 0 || start < 0) throw Error("invalid start index");
   if (typeof end !== "number" || end % 1 !== 0 || end < 0) throw Error("invalid end index");
   if (start > end) throw Error("invalid start and end index");
