@@ -41,10 +41,10 @@ describe('indexOfTests', () => {
   // test('искомый текст встречается после начального индекса и находится нормально', () => {
   //   assertToBe(indexOf('I am: he hello brother. Answer: hello!', 'hello'), 9);
   // })
-  // test('второй параметр как пустая строка возвращает -1', () => {
-  //   assertToBe(indexOf(complexText, ''), -1);
-  //   assertToBe(indexOf(complexText, '', 5), -1);
-  // });
+  // // test('второй параметр как пустая строка возвращает -1', () => {
+  // //   assertToBe(indexOf(complexText, ''), -1);
+  // //   assertToBe(indexOf(complexText, '', 5), -1);
+  // // });
   // test('пустой первый параметр дает возвращает -1', () => {
   //   assertToBe(indexOf('', 'q'), -1);
   // });

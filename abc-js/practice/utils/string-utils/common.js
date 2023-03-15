@@ -1,7 +1,8 @@
+import { len } from "./len.js";
 /** для получения цифры строки по его индексу */
-export const DIGITS = '0123456789';
-export const SIGNS = '+-';
-export const FLOAT_DELIMITER = '.';
+export const DIGITS = "0123456789";
+export const SIGNS = "+-";
+export const FLOAT_DELIMITER = ".";
 
 export const ENG_UPPER_START = 65;
 export const ENG_UPPER_FINISH = 90;
@@ -23,3 +24,13 @@ export const DIGIT_FINISH = 57;
 export const complexText = "Hello world!!! It's terminator";
 
 export const ZERO_CODE_CHAR = String.fromCharCode(0);
+
+export function checkParameters(text) {
+  if (typeof text !== "string") throw Error("argument must be type of string");
+}
+export function checkSubstringParameters(text, start, end) {
+  if (typeof start !== "number" || start % 1 !== 0 || start < 0) throw Error("invalid start index");
+  if (typeof end !== "number" || end % 1 !== 0 || end < 0) throw Error("invalid end index");
+  if (start > end) throw Error("invalid start and end index");
+  if (end > len(text)) throw Error("invalid end index");
+}
