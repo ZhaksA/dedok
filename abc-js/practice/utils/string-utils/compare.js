@@ -1,10 +1,14 @@
-import { checkCompareParameters } from "./common.js";
+import { checkParameters } from "./common.js";
 import { len } from "./len.js";
 /** возвращает булевый ответ равны ли параметры firstText и secondText. */
 export function isEqual(firstText, secondText) {
-  checkCompareParameters(firstText, secondText);
-  if (len(firstText) !== len(secondText)) return false;
-  const cycleLength = len(firstText) < len(secondText) ? len(firstText) : len(secondText);
+  checkParameters(firstText);
+  checkParameters(secondText);
+  const lenFirstText = len(firstText);
+  const lenSecondText = len(secondText);
+  if (lenFirstText !== lenSecondText) return false;
+  const cycleLength =
+    lenFirstText < lenSecondText ? lenFirstText : lenSecondText;
   for (let index = 0; index < cycleLength; index += 1) {
     if (firstText[index] !== secondText[index]) return false;
   }
@@ -18,7 +22,8 @@ export function isNotEqual(firstText, secondText) {
 
 /** возвращает булевый ответ больше ли параметр firstText чем secondText. */
 export function isMore(firstText, secondText) {
-  checkCompareParameters(firstText,secondText);
+  checkParameters(firstText);
+  checkParameters(secondText);
   const lenFirstText = len(firstText);
   const lenSecondText = len(secondText);
   for (let i = 0; i < lenFirstText; i += 1) {

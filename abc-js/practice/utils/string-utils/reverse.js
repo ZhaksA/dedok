@@ -1,10 +1,11 @@
-import {lenErrors} from "./common.js";
+import {checkParameters} from "./common.js";
+import { len } from "./len.js";
 /** Возвращает "развернутую" копию text */
 export function reverse(text) {
-    lenErrors(text);
-    let newValue = "";
-    for (let i = text.length - 1; i >= 0; i-=1) {
-        newValue += text[i];
+    checkParameters(text);
+    let resultValue = "";
+    for (let i = len(text) - 1; i >= 0; i-=1) {
+        resultValue += text[i];
     }
-    return newValue;
+    return resultValue;
 }

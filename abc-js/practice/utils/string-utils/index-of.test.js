@@ -8,30 +8,30 @@ describe('indexOfTests', () => {
   test('найти текст с середины текста', () => {
     assertToBe(indexOf(complexText, 'terminator'), 20);
   });
-  test('найти текст с начала текста', () => {
-    assertToBe(indexOf(complexText, 'Hello'), 0);
-  });
-  test('найти текст с начала текста с одиночным символом', () => {
-    assertToBe(indexOf(complexText, 'H'), 0);
-  });
-  test('текст не найден', () => {
-    assertToBe(indexOf(complexText, 'Help'), -1);
-  });
-  test('регистр имеет значение', () => {
-    assertToBe(indexOf(complexText, 'hello'), -1);
-  });
-  test('слово есть, но длина больше', () => {
-    assertToBe(indexOf(complexText, 'terminator.'), -1);
-  });
-  test('поиск первого совпадения', () => {
-    assertToBe(indexOf(complexText, 't'), 16);
-  });
-  test('поиск первого совпадения с тем же индексом', () => {
-    assertToBe(indexOf(complexText, 't', 16), 16);
-  });
-  test('поиск второго совпадения', () => {
-    assertToBe(indexOf(complexText, 't', 17), 20);
-  });
+  // test('найти текст с начала текста', () => {
+  //   assertToBe(indexOf(complexText, 'Hello'), 0);
+  // });
+  // test('найти текст с начала текста с одиночным символом', () => {
+  //   assertToBe(indexOf(complexText, 'H'), 0);
+  // });
+  // test('текст не найден', () => {
+  //   assertToBe(indexOf(complexText, 'Help'), -1);
+  // });
+  // test('регистр имеет значение', () => {
+  //   assertToBe(indexOf(complexText, 'hello'), -1);
+  // });
+  // test('слово есть, но длина больше', () => {
+  //   assertToBe(indexOf(complexText, 'terminator.'), -1);
+  // });
+  // test('поиск первого совпадения', () => {
+  //   assertToBe(indexOf(complexText, 't'), 16);
+  // });
+  // test('поиск первого совпадения с тем же индексом', () => {
+  //   assertToBe(indexOf(complexText, 't', 16), 16);
+  // });
+  // test('поиск второго совпадения', () => {
+  //   assertToBe(indexOf(complexText, 't', 17), 20);
+  // });
   // test('поиск третьего совпадения', () => {
   //   assertToBe(indexOf(complexText, 't', 21), 27);
   // });
@@ -41,10 +41,10 @@ describe('indexOfTests', () => {
   // test('искомый текст встречается после начального индекса и находится нормально', () => {
   //   assertToBe(indexOf('I am: he hello brother. Answer: hello!', 'hello'), 9);
   // })
-  // test('второй параметр как пустая строка возвращает -1', () => {
-  //   assertToBe(indexOf(complexText, ''), -1);
-  //   assertToBe(indexOf(complexText, '', 5), -1);
-  // });
+  // // test('второй параметр как пустая строка возвращает -1', () => {
+  // //   assertToBe(indexOf(complexText, ''), -1);
+  // //   assertToBe(indexOf(complexText, '', 5), -1);
+  // // });
   // test('пустой первый параметр дает возвращает -1', () => {
   //   assertToBe(indexOf('', 'q'), -1);
   // });

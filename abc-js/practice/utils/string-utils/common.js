@@ -25,13 +25,8 @@ export const complexText = "Hello world!!! It's terminator";
 
 export const ZERO_CODE_CHAR = String.fromCharCode(0);
 
-export function checkCompareParameters(text) {
+export function checkParameters(text) {
   if (typeof text !== "string") throw Error("argument must be type of string");
-}
-export function checkParameters(text, count) {
-  if (typeof text !== "string") throw Error("argument must be type of string");
-  if (typeof count !== "number") throw Error("invalid count");
-  if (count < 0 || count % 1 !== 0) throw Error("invalid count");
 }
 export function checkSubstringParameters(text, start, end) {
   if (typeof start !== "number" || start % 1 !== 0 || start < 0) throw Error("invalid start index");
